@@ -1,0 +1,11 @@
+apiVersion: v1                        # YAML 파일에서 정의한 오브젝트의 API 버전
+kind: Pod                             # 리소스의 종류 (kubectl api-resources 명령의 KIND 항목)
+metadata:                             # 리소소의 부가 정보 (이름, 라벨, 주석)
+  name: my-nginx-pod
+spec:                                 # 리소스 생성을 위한 정보
+  containers:
+    - name: my-nginx-container
+      image: nginx:latest
+      ports:
+      - containerPort: 80
+        protocol: TCP
